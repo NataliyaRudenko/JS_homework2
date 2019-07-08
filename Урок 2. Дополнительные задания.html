@@ -1,0 +1,101 @@
+﻿<!-- 
+    1. Среди трех чисел найти среднее арифметическое. Если среди чисел есть равные, вывести сообщение "Ошибка". Числа принять от пользователя.
+
+    2. Построить прямоугольный треугольник состоящий из символа "*".
+
+    3. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран.
+
+    4. Дано два числа A и B где (A<B). 
+    Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В. 
+    Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В.   
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+<!--3.-->
+    <script type="text/javascript">
+        var n1 = +prompt('введите число 1');
+        var n2 = +prompt('введите число 2');
+        var n3 = +prompt('введите число 3');
+        var max;
+
+        if (n1 > n2 > n3) {
+            var max = n1; 
+            document.write(max + '<br/>');
+        }
+        else if (n2 > n3 > n1) {      
+            var max = n2;
+            document.write(max + '<br/>');
+        }
+        else {
+            var max = n3;
+            document.write(max + '<br/>');
+        }
+    </script>
+
+
+
+<!--4.-->
+    <script>
+        var A = 2;
+        var B = 10;
+        while (A < B) {   
+            
+            console.log(A);
+            A++;
+        };
+        
+    </script>
+
+
+
+    
+<!--1.-->
+    <script>
+        var n1 = +prompt('введите число 1');
+        var n2 = +prompt('введите число 2');
+        var n3 = +prompt('введите число 3');
+
+        var n4 = (n1 + n2 + n3) / 3;
+
+        if (n1 === n2) {
+            console.log("Ошибка");
+        }
+        else if (n2 === n3) {
+            console.log("Ошибка");
+        }
+        else if (n1 === n3) {
+            console.log("Ошибка");
+        }
+        else {
+            console.log(n4);
+        }
+    </script>
+
+
+
+<!--2.-->
+    <script>
+        for (i = 0; i < 20; i++) {
+ 
+        for (j = 20, k = 0; j > 0 && k < 20; j--, k++) {
+
+            if (k < i || i >= j) {
+                document.write(' ');
+            }
+
+            else {
+                document.write('*');
+            }
+        }
+        document.write('</br>');
+    }
+    </script>
+
+</head>
+<body>
+</body>
+</html>
